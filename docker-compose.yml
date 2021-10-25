@@ -1,0 +1,19 @@
+# docker-compose.yml
+version: '3'
+services:
+  primes_server:
+    build:
+      dockerfile: Dockerfile
+      context: ./server
+    ports:
+      - 5000:5000
+  primes_client:
+    build:
+      dockerfile: Dockerfile
+      context: ./client
+    ports:
+      - 3000:3000
+    depends_on: 
+      - primes_server
+    environment:
+      BACKEND_IP: primes_server
