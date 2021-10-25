@@ -22,7 +22,7 @@ returns:
   "isPrime": false
 }
 
-in case of an error:
+in case of an error e.g.:
 {
   "errors": [
     {
@@ -42,7 +42,7 @@ returns:
   "isPrime": true
 }
 
-in case of an error:
+in case of an error e.g.:
 {
   "errors": [
     {
