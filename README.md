@@ -7,7 +7,7 @@ docker-compose build
 docker-compose up
 
 
-Browse to localhost:3000 for UI.
+Browse to http://localhost:3000 for UI.
 
 
 
