@@ -33,20 +33,22 @@ export const SingleNumberCheck = (props) => {
     }
   
     return(
-      <div className="App">
+      <div className="number-asking">
         <form id="contact-form" onSubmit={numberSubmit}>
           <div className="form-group">
-            <label htmlFor="number">A number:</label>
+            <label className="form-label" htmlFor="number">A number:</label>
             <input type="text" name="number" value={number} onChange={handleNumberChange} className="form-control" />
+          </div>
+          <div>
             <button type="submit" className="btn btn-primary">Is the number prime?</button>
+            {errorMsg ? <div>{errorMsg}</div> : ''}
           </div>
         </form>
   
-        {errorMsg ? <div>{errorMsg}</div> : ''}
-        <div className="isPrime">
-          {showIsPrime &&
-            <ShowPrime number={number} isPrime={isNumberPrime} />       
-          }
+        <div className="is-prime">
+            <div className={showIsPrime ? 'visible' : 'hidden'}>
+              <ShowPrime number={number} isPrime={isNumberPrime} />
+            </div>       
         </div>
       </div>
     );

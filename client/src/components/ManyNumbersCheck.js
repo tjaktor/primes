@@ -35,20 +35,22 @@ export const ManyNumbersCheck = (props) => {
     }
   
     return(
-      <div className="App">
+      <div className="number-asking">
         <form id="contact-form" onSubmit={numbersSubmit}>
           <div className="form-group">
-            <label htmlFor="number">Many numbers (e.g. "1,3,4"):</label>
+            <label className="form-label" htmlFor="number">Many numbers (e.g. "1,3,4"):</label>
             <input type="text" name="number" value={numbers} onChange={handleNumberChange} className="form-control" />
+          </div>
+          <div>
             <button type="submit" className="btn btn-primary">Is the sum of the numbers prime?</button>
+            {errorMsg ? <div>{errorMsg}</div> : ''}
           </div>
         </form>
-  
-        {errorMsg ? <div>{errorMsg}</div> : ''}
-        <div className="isPrime">
-          {showIsPrime &&
-            <ShowSumPrime numbers={numbers} numbersSum={numbersSum} isPrime={isNumberPrime} />       
-          }
+
+        <div className="is-prime">
+            <div className={showIsPrime ? 'visible' : 'hidden'}>
+              <ShowSumPrime numbers={numbers} numbersSum={numbersSum} isPrime={isNumberPrime} />
+            </div>
         </div>
       </div>
     );
