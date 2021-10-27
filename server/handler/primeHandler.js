@@ -19,8 +19,12 @@ const checkOneNumberForPrime = (number) => {
 const isNumberPrime = (number) => {
     if (number <= 1) { return false; }
 
-    const regex = /^.?$|^(..+?)\1+$/;
-    return !regex.test('1'.repeat(number));
+    for (let divisor = 2; divisor < number; divisor++) {
+        if( number % divisor == 0) {
+            return false;
+        }
+    }
+    return true;
 }
 
 module.exports = {
