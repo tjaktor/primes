@@ -53,3 +53,9 @@ in case of an error e.g.:
     }
   ]
 }
+
+
+
+run tests in server:
+
+npm run test
