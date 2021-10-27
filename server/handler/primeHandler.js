@@ -17,11 +17,14 @@ const checkOneNumberForPrime = (number) => {
 }
 
 const isNumberPrime = (number) => {
+    if (number <= 1) { return false; }
+
     const regex = /^.?$|^(..+?)\1+$/;
     return !regex.test('1'.repeat(number));
 }
 
 module.exports = {
     checkNumbersForPrime,
-    checkOneNumberForPrime
+    checkOneNumberForPrime,
+    isNumberPrime
 }
