@@ -7,14 +7,14 @@ const checkNumbersForPrime = (numbers) => {
 
     const isPrime = isNumberPrime(sum);
 
-    return { "result":sum, "isPrime":isPrime }
-}
+    return { "result":sum, "isPrime":isPrime };
+};
 
 const checkOneNumberForPrime = (number) => {
     const isPrime = isNumberPrime(number);
 
-    return { "isPrime":isPrime }
-}
+    return { "isPrime":isPrime };
+};
 
 const isNumberPrime = (number) => {
     if (number <= 1) { return false; }
@@ -25,10 +25,10 @@ const isNumberPrime = (number) => {
         }
     }
     return true;
-}
+};
 
 module.exports = {
     checkNumbersForPrime,
     checkOneNumberForPrime,
     isNumberPrime
-}
+};
