@@ -1,9 +1,9 @@
-#With primes you can check if a number is a prime number or not.
+# With primes you can check if a number is a prime number or not.
 
-##Install (in primes/client and primes/server)
+## Install (in primes/client and primes/server)
 npm install
 
-##To run (in primes directory):
+## To run (in primes directory):
 
 docker-compose build
 
@@ -14,7 +14,7 @@ Browse to http://localhost:3000 for UI.
 
 
 
-##Backend entrypoints:
+## Backend entrypoints:
 
 http://localhost:5000/myapi/sum?nums=1,2,3
 E.g. check if sum of 1,2,3 is prime number
@@ -58,5 +58,5 @@ in case of an error e.g.:
 }
 
 
-##Run tests in /server:
+## Run tests in /server:
 npm run test
